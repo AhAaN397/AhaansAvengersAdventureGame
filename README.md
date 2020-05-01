@@ -3,7 +3,7 @@ Game made and developed by Ahaan Shah
 
 Hello Ahaan!
 
-This is Jordan so get you started:
+This is Jordan so to get you started:
 
 1. Click on branches
 2. Click on your name
