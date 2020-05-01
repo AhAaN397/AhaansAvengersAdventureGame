@@ -4,7 +4,8 @@ import time
 
 #Variable List
 villianHealth = 90
-villain = random.randint(1,5)# Randomizes the villian you get
+
+villain = random.randint(1,3)# Randomizes the villian you get
 playerHealth = random.randint(55,85) # randomizes health IronMan Gets
 dodgeAttack = random.randint(1,2) # randomizes if your dodge attack works or fails.
 dodgeDamage = random.randint(1,25)
@@ -106,22 +107,26 @@ if villain == 1:
 #Loop to check player health and engage battle
 while playerHealth >= 0:                                            
     print("Choose move:\n1) Dodge\n2) " + str(move))
-    move = int(input(""))
+
+    #move = int(input(""))
+    choice = int(input(""))
    
     dodgeAttack = random.randint(1,25)
-    if move == 1 and dodgeAttack == 1:          # if statements to see if dodge attack works or fails
+    damageDone = random.randint(35,75)  # randomizing damage done per player
+    if choice == 1 and dodgeAttack == 1:          # if statements to see if dodge attack works or fails
         print("You dodge his attack and do " + str(dodgeDamage) + " damage!\n")        
         time.sleep(1.2)
         villianHealth = villianHealth - dodgeDamage        
         print(villainName + " has " + str(villianHealth) + " health left.")
-    if move == 1 and dodgeAttack == 2:
+
+    if choice == 1 and dodgeAttack == 2:
         print("Your dodge failed...\n")
         time.sleep(1.2)
         print(villainName + " does " + str(damageTaken) + " damage!\n")
         time.sleep(1)
         print("You have " + str(playerHealth-damageTaken) + " health left\n")
         playerHealth = playerHealth - damageTaken
-    if move == 2:
+    if choice == 2:
         villianHealth = villianHealth - damageDone                                                
         print("You do " + str(damageDone) + " damage!\n")
         time.sleep(1.5)
