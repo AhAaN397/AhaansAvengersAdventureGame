@@ -22,6 +22,59 @@ if player == 1: #Player chooses Iron Man
     damageDone = random.randint(35,75)  # randomizing damage done per player
     move = 'Laser Beam'  # changing move per player
     playerHealth = 85  # setting player health
+    playerName = 'Iron Man' # setting player name
+    print("You have chosen " + playerName + "!")
+    print("Your supper powers include: Laser beam, Flying, and Super smart.\nPress enter to continue.")
+    input()
+    print()
+    print()
+    print("Smartness level: max. Flying fuel: max. Lazer beams: medium. Health = " + str(playerHealth) + ".")  
+    time.sleep(3.5)
+    print("Engaging in battle...")
+    print("5...")
+    time.sleep(1)
+    print("4...")
+    time.sleep(1)
+    print("3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print()
+    print("Choosing opponent.\n")
+    time.sleep(1.2)
+    print("Opponent found...\n")
+
+
+if player == 2: #Player chooses Bat Man
+    damageDone = random.randint(45,75)
+    move = 'Gadget Belt'
+    playerHealth = 90
+    playerName = 'Bat Man'
+    print("You have chosen " + playerName + "!")
+    print("Your supper powers include: Super smart, Gagdet Belt.\nPress enter to continue.")
+    input()
+    print()
+    print()
+    print("Smartness level: max. Tools: max. Health = " + str(playerHealth) + ".")  
+    time.sleep(3.5)
+    print("Engaging in battle...")
+    print("5...")
+    time.sleep(1)
+    print("4...")
+    time.sleep(1)
+    print("3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print()
+    print("Choosing opponent.\n")
+    time.sleep(1.2)
+    print("Opponent found...\n")
+
 if player == 3: #Player chooses thor
     damageDone = random.randint(55,90)
     move = 'Mjolnir'
@@ -61,21 +114,54 @@ if player == 4: #Player chooses Cap America
     print()
     print()
     print("Smartness level: max. Shield power: max. Health = " + str(playerHealth) + ".")  
-    damageTaken = random.randint(55,75)
-    print("Engaging in battle with " + villainName + "...")  
+    time.sleep(3.5)
+    print("Engaging in battle...")
+    print("5...")
     time.sleep(1)
-    print(villainName + " super powers include: Laser Beam.")      
+    print("4...")
+    time.sleep(1)
+    print("3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print()
+    print("Choosing opponent.\n")
+    time.sleep(1.2)
+    print("Opponent found...\n")
+   
+   
+# Loki
+if villain == 5:
+    villainName = 'Loki'   #setting var to 'Loki'
+    villianHealth = 90
+    damageTaken = random.randint(45,75)         #Get random value for damage taken
+    print("Engaging in battle with " + villainName + "...")   #Changing Loki to villainName
+    time.sleep(1)
+    print(villainName + " super powers include: Energy Blast.")       #Changing Loki to villainName 
+    time.sleep(1)
+    print("Speed level: Max. Smartness level: low. Health = " + str(villianHealth) + "\n")
+
+# Ultron
+if villain == 4:
+    villainName = 'Ultron'
+    villianHealth = 100
+    damageTaken = random.randint(55,75)
+    print("Engaging in battle with " + villainName + "...")   
+    time.sleep(1)
+    print(villainName + " super powers include: Laser Beam.")       
     time.sleep(1)
     print("Speed level: med. Smartness level: 10000000%. Health = " + str(villianHealth) + "\n")
-   
+    
 # Doctor Doom
 if villain == 3:
     villainName = 'Doctor Doom'
     villianHealth = 120
     damageTaken = random.randint(35,80)
-    print("Engaging in battle with " + villainName + "...")  
+    print("Engaging in battle with " + villainName + "...")   
     time.sleep(1)
-    print(villainName + " super powers include: Destroy.")      
+    print(villainName + " super powers include: Destroy.")       
     time.sleep(1)
     print("Speed level: low. Smartness level: max. Health = " + str(villianHealth) + "\n")
 
@@ -84,9 +170,9 @@ if villain == 2:
     villainName = 'Skrull'
     villianHealth = 85
     damageTaken = random.randint(20,75)
-    print("Engaging in battle with " + villainName + "...")  
+    print("Engaging in battle with " + villainName + "...")   
     time.sleep(1)
-    print(villainName + " super powers include: Shape Shifting.")      
+    print(villainName + " super powers include: Shape Shifting.")       
     time.sleep(1)
     print("Speed level: low. Smartness level: max. Health = " + str(villianHealth) + "\n")
 
@@ -97,17 +183,20 @@ if villain == 1:
     damageTaken = random.randint(55,150)
     print("You are fighting the MEGABOSS!")
     time.sleep(1.2)
-    print("Engaging in battle with " + villainName + "...")  
+    print("Engaging in battle with " + villainName + "...")   
     time.sleep(1)
-    print(villainName + " super powers include: Harnessing the powers of the infinty gauntlet.")      
+    print(villainName + " super powers include: Harnessing the powers of the infinty gauntlet.")       
     time.sleep(1)
     print("Speed level: low. Smartness level: max. Health = " + str(villianHealth) + "\n")
+
+
 
 #Loop to check player health and engage battle
 while playerHealth >= 0:                                            
     print("Choose move:\n1) Dodge\n2) " + str(move))
     move = int(input(""))
-   
+    damageTaken = random.randint(45,85)
+    damageDone = random.randint(35,75)
     dodgeAttack = random.randint(1,25)
     if move == 1 and dodgeAttack == 1:          # if statements to see if dodge attack works or fails
         print("You dodge his attack and do " + str(dodgeDamage) + " damage!\n")        
